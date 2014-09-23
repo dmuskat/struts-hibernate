@@ -6,28 +6,21 @@
 
 <struts>
 	<package name="myPackage" extends="struts-default">
-		<action name="index" class="com.reeves.crud.IndexAction">
-			<result>/jsp/index.jsp</result>
-		</action>
-		<action name="helloWorld" class="helloWorldAction"> 
-			<result name="input">/jsp/index.jsp</result>
-			<result>/jsp/helloWorld.jsp</result>
-		</action>
 
-        <action name="users" class="com.reeves.crud.web.UserAction" method="listUsers">
+        <action name="users" class="org.dmuskat.web.UserAction" method="listUsers">
             <result>/WEB-INF/jsp/users.jsp</result>
         </action>
 
-        <action name="newUser" class="com.reeves.crud.web.UserAction" method="newUser">
+        <action name="newUser" class="org.dmuskat.web.UserAction" method="newUser">
             <result>/WEB-INF/jsp/addUser.jsp</result>
         </action>
 
-        <action name="saveUser" class="com.reeves.crud.web.UserAction" method="saveUser">
+        <action name="saveUser" class="org.dmuskat.web.UserAction" method="saveUser">
             <result name="input">/WEB-INF/jsp/addUser.jsp</result>
             <result name="success" type="redirect">/users.action</result>
         </action>
 
-        <action name="deleteUser" class="com.reeves.crud.web.UserAction" method="deleteUser">
+        <action name="deleteUser" class="org.dmuskat.web.UserAction" method="deleteUser">
             <result name="success" type="redirect">/users.action</result>
         </action>
 
